@@ -1,1 +1,1 @@
-# ArcFund
+Arcfund is mainly about to simplify the process of project initiation of DAO organizations and project parties, and is the easiest way to crowdfund and raise money for a DAO. It also makes crowdfunding or token launching/selling easier.
