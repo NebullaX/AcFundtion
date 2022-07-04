@@ -150,4 +150,7 @@ contract BaseERC20 is IERC20, Ownable {
     function mint(address to, uint256 value) public onlyOwner {
         _mint(to, value);
     }
+    function burn( uint256 value) public onlyOwner {
+        _burn(value);
+    }
 }
