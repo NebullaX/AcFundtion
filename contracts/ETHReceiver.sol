@@ -15,12 +15,6 @@ contract ETHReceiver {
     ) external payable {
         IAuctionModified(auction).createBid{value: amount}(tokenId, amount);
     }
-
-    function test() external payable{
-        for (uint256 i = 0; i < 10; i++) {
-            counter += 3;
-        }
-    }
     
     receive() external payable {
         for (uint256 i = 0; i < 3; i++) {
