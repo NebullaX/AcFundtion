@@ -8,11 +8,7 @@ interface IAuctionModified {
 contract ReentrancyAttacker {
     uint256 counter = 0;
 
-    function relayBid(
-        address auction,
-        uint256 tokenId,
-        uint256 amount
-    ) external payable {
+    function relayBid(address auction, uint256 tokenId, uint256 amount) external payable {
         IAuctionModified(auction).createBid{value: amount}(tokenId, amount);
     }
 
