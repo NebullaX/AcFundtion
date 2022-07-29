@@ -7,11 +7,7 @@ interface IAuctionModified {
 
 contract ETHRejecter {
 
-    function relayBid(
-        address auction,
-        uint256 tokenId,
-        uint256 amount
-    ) external payable {
+    function relayBid(address auction, uint256 tokenId,  uint256 amount) external payable {
         IAuctionModified(auction).createBid{value: amount}(tokenId, amount);
     }
 
