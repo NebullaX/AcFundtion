@@ -6,6 +6,7 @@ interface IAuctionModified {
 }
 
 contract ETHRejecter {
+
     function relayBid(
         address auction,
         uint256 tokenId,
