@@ -113,11 +113,7 @@ contract BaseERC20 is IERC20, Ownable {
         }
     }
 
-    function approve(address spender, uint256 value)
-        public
-        override
-        returns (bool)
-    {
+    function approve(address spender, uint256 value) public override returns (bool) {
         return _approve(msg.sender, spender, value);
     }
 
