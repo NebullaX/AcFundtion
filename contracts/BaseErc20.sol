@@ -125,11 +125,7 @@ contract BaseERC20 is IERC20, Ownable {
         return _approve(msg.sender, spender, value);
     }
 
-    function _approve(
-        address owner,
-        address spender,
-        uint256 value
-    ) internal returns (bool) {
+    function _approve(address owner, address spender, uint256 value) internal returns (bool) {
         _allowances[owner][spender] = value;
 
         emit Approval(owner, spender, value);
