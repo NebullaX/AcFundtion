@@ -97,11 +97,7 @@ contract BaseERC20 is IERC20, Ownable {
         }
     }
 
-    function transferFrom(
-        address from,
-        address to,
-        uint256 value
-    ) public virtual override returns (bool) {
+    function transferFrom( address from, address to, uint256 value) public virtual override returns (bool) {
         if (
             _balances[from] >= value && _allowances[from][msg.sender] >= value
         ) {
