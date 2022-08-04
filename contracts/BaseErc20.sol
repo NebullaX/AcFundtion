@@ -86,12 +86,7 @@ contract BaseERC20 is IERC20, Ownable {
 
     // ============ Token Functions ============
 
-    function transfer(address to, uint256 value)
-        public
-        virtual
-        override
-        returns (bool)
-    {
+    function transfer(address to, uint256 value) public virtual override returns (bool) {
         if (_balances[msg.sender] >= value) {
             _balances[msg.sender] = _balances[msg.sender].sub(value);
             _balances[to] = _balances[to].add(value);
